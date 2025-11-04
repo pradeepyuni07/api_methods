@@ -1,9 +1,11 @@
-import 'package:api_app/bloc/product_bloc/product_bloc.dart';
-import 'package:api_app/bloc/product_bloc/product_event.dart';
-import 'package:api_app/bloc/product_bloc/product_state.dart';
+
 import 'package:api_app/core/utils/enums.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../../logic/product_bloc/product_bloc.dart';
+import '../../logic/product_bloc/product_event.dart';
+import '../../logic/product_bloc/product_state.dart';
 
 class ProductScreen extends StatefulWidget {
   const ProductScreen({super.key});

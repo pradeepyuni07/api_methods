@@ -1,6 +1,8 @@
 import 'package:equatable/equatable.dart';
 
-import '../../model/post/post_model.dart';
+import '../../data/models/post_model.dart';
+
+
 
 sealed class PostState extends Equatable {
   @override

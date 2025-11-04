@@ -1,7 +1,8 @@
 import 'package:api_app/core/utils/enums.dart';
 import 'package:equatable/equatable.dart';
 
-import '../../model/product/product.dart';
+import '../../data/models/product.dart';
+
 
 class ProductState extends Equatable {
   final Status status;

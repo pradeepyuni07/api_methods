@@ -1,8 +1,10 @@
-import 'package:api_app/bloc/post_bloc/post_bloc.dart';
-import 'package:api_app/bloc/post_bloc/post_event.dart';
-import 'package:api_app/bloc/post_bloc/post_state.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../../logic/post_bloc/post_bloc.dart';
+import '../../logic/post_bloc/post_event.dart';
+import '../../logic/post_bloc/post_state.dart';
 
 class PostScreen extends StatefulWidget {
   const PostScreen({super.key});

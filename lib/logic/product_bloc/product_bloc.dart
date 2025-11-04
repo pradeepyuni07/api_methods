@@ -1,10 +1,11 @@
-import 'package:api_app/bloc/product_bloc/product_event.dart';
-import 'package:api_app/bloc/product_bloc/product_state.dart';
+
 import 'package:api_app/core/constants/api_urls.dart';
+import 'package:api_app/data/reposiotry/api_methods.dart';
+import 'package:api_app/logic/product_bloc/product_event.dart';
+import 'package:api_app/logic/product_bloc/product_state.dart';
 import 'package:bloc/bloc.dart';
 
 import '../../core/utils/enums.dart';
-import '../../data/reposiotry/product_repo.dart';
 
 class ProductBloc extends Bloc<ProductEvent, ProductState> {
   ProductBloc() : super(ProductState()) {
@@ -12,7 +13,7 @@ class ProductBloc extends Bloc<ProductEvent, ProductState> {
   }
 
   void _productGet(ProductGet event, Emitter emit) async {
-    await ProductRepo.getApi(ApiUrls.products)
+    await ApiMethods.getApiUrl(ApiUrls.endPointOfProducts)
         .then((value) {
           emit(state.copyWith(status: Status.completed, productList: value));
         })
